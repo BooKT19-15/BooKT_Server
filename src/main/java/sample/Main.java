@@ -29,7 +29,7 @@ public class Main {
         FileInputStream serviceAccount =
                 null;
         try {
-            serviceAccount = new FileInputStream("C:\\Users\\amuri\\Desktop\\Bookt-server\\src\\main\\resources\\firebase_con.json");
+            serviceAccount = new FileInputStream("firebase_con.json");
 
 
             options = new FirebaseOptions.Builder()
