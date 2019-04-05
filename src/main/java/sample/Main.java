@@ -4,10 +4,7 @@ import com.google.auth.oauth2.GoogleCredentials;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.FirebaseOptions;
 import com.google.firebase.database.*;
-import com.google.firebase.messaging.FirebaseMessaging;
-import com.google.firebase.messaging.Message;
-import javafx.application.Application;
-import javafx.stage.Stage;
+
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -16,15 +13,19 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 
-public class Main extends Application {
+public class Main {
 
-    FirebaseOptions options;
-    FirebaseDatabase database;
-    DatabaseReference databaseReference;
+    private static FirebaseOptions options ;
+    private static FirebaseDatabase database ;
+    private static DatabaseReference databaseReference ;
 
 
-    @Override
-    public void start(Stage primaryStage) throws Exception{
+
+
+    public static void main(String[] args) {
+
+
+
         FileInputStream serviceAccount =
                 null;
         try {
@@ -161,7 +162,7 @@ public class Main extends Application {
                 DatabaseReference myRef = FirebaseDatabase.getInstance().getReference().child("Reservation").child(rest.getRestaurantDetails().getFirebase_id()).child("sections").child("single");
                 if (rest.getTableListSingle() != null) {
                     System.out.println("working inside single list max");
-                   int [] max = new int[rest.getTableListSingle().getTableListSingle().size()];
+                    int [] max = new int[rest.getTableListSingle().getTableListSingle().size()];
                     for (int i = 0; i < rest.getTableListSingle().getTableListSingle().size(); i++) {
                         myRef.child("T" + rest.getTableListSingle().getTableListSingle().get(i).getSeatCount()).child("max").setValueAsync(rest.getTableListSingle().getTableListSingle().get(i).tableCount);
                         max[i] = Integer.parseInt(rest.getTableListSingle().getTableListSingle().get(i).getSeatCount());
@@ -175,7 +176,7 @@ public class Main extends Application {
                 myRef = FirebaseDatabase.getInstance().getReference().child("Reservation").child(rest.getRestaurantDetails().getFirebase_id()).child("sections").child("family");
                 if (rest.getTableListFamily() != null) {
                     System.out.println("working inside family list max");
-                   int [] max = new int [rest.getTableListFamily().getTableListFamily().size()];
+                    int [] max = new int [rest.getTableListFamily().getTableListFamily().size()];
                     for (int i = 0; i < rest.getTableListFamily().getTableListFamily().size(); i++) {
                         myRef.child("T" + rest.getTableListFamily().getTableListFamily().get(i).getSeatCount()).child("max").setValueAsync(rest.getTableListFamily().getTableListFamily().get(i).tableCount);
                         max [i] = Integer.parseInt(rest.getTableListFamily().getTableListFamily().get(i).getSeatCount());
@@ -225,13 +226,6 @@ public class Main extends Application {
 
 
 
-
-
-
-    }
-
-
-    public static void main(String[] args) {
-        launch(args);
+        while (true);
     }
 }
