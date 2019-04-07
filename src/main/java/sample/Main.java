@@ -14,6 +14,7 @@ import com.google.firebase.messaging.Message;
 
 
 import javax.mail.*;
+import javax.mail.internet.AddressException;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 import java.io.FileInputStream;
@@ -205,7 +206,7 @@ public class Main {
                         });
                 try {
 
-                    javax.mail.internet.MimeMessage message = new MimeMessage(session);
+                    javax.mail.internet.MimeMessage message = new javax.mail.internet.MimeMessage(session);
                     message.setFrom(new InternetAddress(username));
                     message.setRecipients(javax.mail.internet.MimeMessage.RecipientType.TO,
                             InternetAddress.parse("memeos_135@hotmail.com"));
@@ -217,8 +218,8 @@ public class Main {
 
                     Transport.send(message);
 
-                } catch (MessagingException ee) {
-                    throw new RuntimeException(ee);
+                } catch (MessagingException e1) {
+                    e1.printStackTrace();
                 }
 
 
