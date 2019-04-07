@@ -56,7 +56,6 @@
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/netty/netty-handler/4.1.22.Final/netty-handler-4.1.22.Final.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/google/api-client/google-api-client/1.25.0/google-api-client-1.25.0.jar" path-in-jar="/" />
-      <element id="library" level="project" name="javafx-swt" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/google/api/grpc/proto-google-iam-v1/0.12.0/proto-google-iam-v1-0.12.0.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/google/errorprone/error_prone_annotations/2.1.2/error_prone_annotations-2.1.2.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/google/cloud/google-cloud-core/1.43.0/google-cloud-core-1.43.0.jar" path-in-jar="/" />

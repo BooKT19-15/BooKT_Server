@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_6">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
     <output url="file://$MODULE_DIR$/target/classes" />
     <output-test url="file://$MODULE_DIR$/target/test-classes" />
     <content url="file://$MODULE_DIR$">
@@ -11,7 +11,6 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="javafx-swt" level="project" />
     <orderEntry type="library" name="slf4j-api-1.7.26" level="project" />
     <orderEntry type="library" name="Maven: com.google.firebase:firebase-admin:6.8.0" level="project" />
     <orderEntry type="library" name="Maven: com.google.api-client:google-api-client:1.25.0" level="project" />
@@ -72,5 +71,7 @@
     <orderEntry type="library" name="Maven: io.netty:netty-common:4.1.22.Final" level="project" />
     <orderEntry type="library" name="Maven: io.netty:netty-transport:4.1.22.Final" level="project" />
     <orderEntry type="library" name="Maven: io.netty:netty-resolver:4.1.22.Final" level="project" />
+    <orderEntry type="library" name="Maven: com.sun.mail:javax.mail:1.6.2" level="project" />
+    <orderEntry type="library" name="Maven: javax.activation:activation:1.1" level="project" />
   </component>
 </module>
